@@ -93,22 +93,6 @@ def torch_seed():
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
 
-def register_210():
-    pid = os.getpid()
-
-    url = 'http://10.10.1.210/api/v1/job/create'
-    d = {'student_id': '2012661', 
-        'password': '210csq',
-        'description': 'asd-2-w300', 
-        'server_ip': '10.10.1.219',
-        'duration': '一小时内', 
-        'pid': pid,
-        'server_user': 'zhangshenglin',
-        'command': '', 
-        'use_gpu': 1,
-        }
-    r = requests.post(url, data=d)
-    print("注册完成")
 
 def by_entity():
     total_train_time = 0
@@ -154,7 +138,6 @@ def by_dataset():
     print(f'exp:{dataset_type}{exp_key}total train time: {total_train_time}')
 
 def main():
-    register_210()
     if train_type == "noshare":
         by_entity()
     else:

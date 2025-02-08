@@ -79,22 +79,7 @@ def end_to_end(i, config, train_data_item, test_data_item):
     np.save(config.result_dir/f'{i}/z.npy', z)
     return total_train_time
 
-def register_210():
-    pid = os.getpid()
 
-    url = 'http://10.10.1.210/api/v1/job/create'
-    d = {'student_id': '2012661', 
-        'password': '210csq',
-        'description': 'asd-2-w300-gdn', 
-        'server_ip': '10.10.1.219',
-        'duration': '一小时内', 
-        'pid': pid,
-        'server_user': 'zhangshenglin',
-        'command': '', 
-        'use_gpu': 1,
-        }
-    r = requests.post(url, data=d)
-    print("注册完成")
 
 
 def by_entity():
@@ -129,7 +114,6 @@ def by_dataset():
     print(f'exp:{dataset_type}{exp_key}total train time: {total_train_time}')
 
 def main():
-    register_210()
     if train_type == "noshare":
         by_entity()
     else:
