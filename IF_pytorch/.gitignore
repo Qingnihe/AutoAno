@@ -1,0 +1,11 @@
+*.xml
+*.iml
+*.csv
+*.txt
+*.pkl
+*.png
+*.pyc
+.DS_Store
+*.npy
+*.sh
+**/out*/

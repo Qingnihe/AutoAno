@@ -1,0 +1,18 @@
+# 未修改的模型
+DOMI/
+DOMI_pytorch/
+InterFusion/
+JumpStarter-main/
+autoML/
+
+# 实验结果
+**/out
+**/imgs
+
+# 测试脚本
+**/test
+
+# 其他
+**/__pycache__/
+**/.DS_Store
+**/.idea

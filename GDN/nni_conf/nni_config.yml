@@ -1,0 +1,13 @@
+searchSpaceFile: ../search_spaces/search_space.json
+trialCommand: python ../example_noshare.py --out_dir='out_test'  # NOTE: change "python3" to "python" if you are using Windows
+trialGpuNumber: 1
+trialConcurrency: 1
+maxExperimentDuration: 48h
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: maximize
+trainingService:
+  platform: local
+  useActiveGpu: true
+  gpuIndices: 0

@@ -1,0 +1,14 @@
+experimentName: asd-2-w300
+searchSpaceFile: ../search_spaces/search_space.json
+trialCommand: python ../example_noshare.py --out_dir='out_asd_2_w300' --dataset_type='application-server-dataset' --entity=2 --window_size=300
+trialGpuNumber: 1
+trialConcurrency: 1
+maxExperimentDuration: 48h
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: minimize
+trainingService:
+  platform: local
+  useActiveGpu: true
+  gpuIndices: 1
